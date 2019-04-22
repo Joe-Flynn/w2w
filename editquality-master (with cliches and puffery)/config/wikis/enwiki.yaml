@@ -1,0 +1,28 @@
+name: enwiki
+label: English Wikipedia
+host: en.wikipedia.org
+
+samples:
+    20k_2015:
+        labeling_campaign: https://labels.wmflabs.org/campaigns/enwiki/4/
+
+default_sample: 20k_2015
+
+merged_samples:
+    20k_2015:
+        human_labeled_revisions: "20k_2015"
+
+models:
+    damaging:
+        pop_rate_true: 0.034163555464634586
+    goodfaith:
+        pop_rate_true: 0.9671661637600368
+
+trusted_groups:
+    - sysop
+    - oversight
+    - bot
+    - rollbacker
+    - checkuser
+    - abusefilter
+    - bureaucrat
