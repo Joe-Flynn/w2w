@@ -30,16 +30,6 @@ badwords = [
     english.badwords.revision.diff.match_prop_delta_decrease
 ]
 
-puffery = [
-    english.puffery.revision.diff.match_delta_sum,
-    english.puffery.revision.diff.match_delta_increase,
-    english.puffery.revision.diff.match_delta_decrease,
-    english.puffery.revision.diff.match_prop_delta_sum,
-    english.puffery.revision.diff.match_prop_delta_increase,
-    english.puffery.revision.diff.match_prop_delta_decrease
-]
-
-
 informals = [
     english.informals.revision.diff.match_delta_sum,
     english.informals.revision.diff.match_delta_increase,
@@ -64,10 +54,28 @@ dict_words = [
     english.dictionary.revision.diff.non_dict_word_prop_delta_decrease
 ]
 
+idioms = [
+    english.idioms.revision.diff.match_delta_sum,
+    english.idioms.revision.diff.match_delta_increase,
+    english.idioms.revision.diff.match_delta_decrease,
+    english.idioms.revision.diff.match_prop_delta_sum,
+    english.idioms.revision.diff.match_prop_delta_increase,
+    english.idioms.revision.diff.match_prop_delta_decrease
+]
+
+puffery = [
+    english.puffery.revision.diff.match_delta_sum,
+    english.puffery.revision.diff.match_delta_increase,
+    english.puffery.revision.diff.match_delta_decrease,
+    english.puffery.revision.diff.match_prop_delta_sum,
+    english.puffery.revision.diff.match_prop_delta_increase,
+    english.puffery.revision.diff.match_prop_delta_decrease
+]
+
 damaging = wikipedia.page + \
     wikitext.parent + wikitext.diff + mediawiki.user_rights + \
     mediawiki.protected_user + mediawiki.comment + \
-    badwords + informals + dict_words + puffery
+    badwords + informals + dict_words + idioms + puffery
 
 reverted = damaging
 goodfaith = damaging
